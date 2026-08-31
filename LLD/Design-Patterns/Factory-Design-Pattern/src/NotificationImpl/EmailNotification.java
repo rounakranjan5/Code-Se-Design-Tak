@@ -1,3 +1,5 @@
+package NotificationImpl;
+
 public class EmailNotification implements Notification {
 
     @Override

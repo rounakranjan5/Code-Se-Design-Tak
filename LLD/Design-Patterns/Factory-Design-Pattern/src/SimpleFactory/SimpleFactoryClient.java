@@ -1,4 +1,4 @@
-/*
+package SimpleFactory;/*
 
     -----------   SIMPLE FACTORY UML ----------------
 
@@ -7,7 +7,7 @@
                            | getNotification("EMAIL")
                            ↓
                 +----------------------+
-                | NotificationFactory  |
+                | SimpleFactory.NotificationFactory  |
                 +----------------------+
                 | +getNotification()    |
                 +----------------------+
@@ -15,7 +15,7 @@
                     /              \
                    ↓                ↓
           +---------------+  +---------------+
-          |EmailNotification| |SMSNotification|
+          |NotificationImpl.EmailNotification| |NotificationImpl.SMSNotification|
           +---------------+  +---------------+
           | +send()       |  | +send()       |
           +---------------+  +---------------+
@@ -23,7 +23,7 @@
                     \              /
                      ↓            ↓
                  +----------------+
-                 |  Notification  |
+                 |  NotificationImpl.NotificationImpl.Notification  |
                  | <<interface>>  |
                  +----------------+
                  | +send()        |
@@ -31,15 +31,17 @@
 
  */
 
+import NotificationImpl.Notification;
+
 public class SimpleFactoryClient {
 
     public static void main(String[] args) {
 
         NotificationSimpleFactory notificationSimpleFactory=new NotificationSimpleFactory();
 
-//        Notification notification=notificationSimpleFactory.getNotification("Email");
+//        NotificationImpl.NotificationImpl.Notification notification=notificationSimpleFactory.getNotification("Email");
 
-//        Notification notification=notificationSimpleFactory.getNotification("SMS");
+//        NotificationImpl.NotificationImpl.Notification notification=notificationSimpleFactory.getNotification("SMS");
 
         Notification notification=notificationSimpleFactory.getNotification("Slack");
 

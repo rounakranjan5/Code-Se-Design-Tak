@@ -1,3 +1,5 @@
+package NotificationImpl;
+
 public class SlackNotification implements Notification {
 
     @Override

@@ -1,5 +1,0 @@
-interface Notification {
-
-    void send();
-
-}

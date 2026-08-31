@@ -1,3 +1,5 @@
+package NotificationImpl;
+
 public class SMSNotification implements Notification {
 
     @Override
